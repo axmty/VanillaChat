@@ -54,6 +54,23 @@
     </form>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyD30kMeyRg622itYmoj6-snt1HRh6NgxT4",
+      authDomain: "test-axmty.firebaseapp.com",
+      databaseURL: "https://test-axmty.firebaseio.com",
+      projectId: "test-axmty",
+      storageBucket: "test-axmty.appspot.com",
+      messagingSenderId: "426472478312",
+      appId: "1:426472478312:web:997c48eed5c5b9dfa00ddd",
+      measurementId: "G-CP6N7BQ1GR"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
   <script src="scripts/chat.js"></script>
   <script src="scripts/ui.js"></script>
   <script src="scripts/app.js"></script>
