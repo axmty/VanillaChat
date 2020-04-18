@@ -1,4 +1,5 @@
 const chatList = document.querySelector('.chat-list');
+const roomBlock = document.querySelector('.chat-rooms');
 const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const defaultName = 'anon';
@@ -20,6 +21,14 @@ newNameForm.addEventListener('submit', e => {
   chatroom.updateName(newName);
   newNameForm.reset();
   localStorage.name = newName;
+});
+
+roomBlock.addEventListener('click', e => {
+  if (e.target.tagName === 'BUTTON') {
+    chatUI.clear();
+    chatroom.updateRoom(e.target.id);
+    chatroom.sync(data => chatUI.render(data));
+  }
 });
 
 const name = localStorage.name ?? defaultName;

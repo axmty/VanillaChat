@@ -16,3 +16,7 @@ ChatUI.prototype.render = function (data) {
 
   this.list.innerHTML += html;
 };
+
+ChatUI.prototype.clear = function () {
+  this.list.innerHTML = '';
+};
