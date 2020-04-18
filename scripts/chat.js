@@ -15,10 +15,10 @@ Chatroom.prototype.addChat = function (message) {
       createdAt: firebase.firestore.Timestamp.fromDate(now)
     };
 
-    const response = this.chats.add(chat).then(result => {
+    const response = this.chats.add(chat).then(() => {
       resolve(response);
     }).catch(err => {
-      console.error(err);
+      reject(err);
     });
   });
 };
